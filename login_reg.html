@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login & Registration Form</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style/style.css">
+	<script src="script/script.js" defer></script>
+	<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" defer></script> 
+</head>
+<body>
+
+
+	<div class="hero">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+				<button type="button" class="toggle-btn" onclick="register()">Register</button>
+			</div>
+
+			<div class="soical-icons">
+				<a href="#"><i class="fa fa-facebook-square  fa-6"></i></a>
+				<a href="#"><i class="fa fa-google-plus-square fa-6"></i></a>
+				<a href="#"><i class="fa fa-twitter-square fa-6"></i></a>
+			</div>
+
+
+			<form id="register" name="form" class="input-group">
+				<input type="text" id="name" name="name" class="input-field" placeholder="Full Name" onblur="allLetter(document.form.name)" required />
+				<input type="email" id="email" name="email" class="input-field" placeholder="Enter Email" onblur="ValidateEmail(document.form.email)" required />
+				<input type="number" id="mnum" name="mnum" class="input-field" placeholder="Enter Mobile Number" onblur="phonenumber(document.form.mnum)" required />
+				<input type="password" id="pass" name="pass" class="input-field" placeholder="Enter Password" onblur="CheckPassword(document.form.pass)" required />
+				<input type="checkbox" class="check-box" /><span>I crosschecked this form &nbsp;&nbsp;&nbsp; <a href="data_crosscheck.html">Check Your Details</a></span>
+				<button type="submit" class="submit-btn" onClick="store()">Register</button>
+			</form>
+
+
+			<form id="login" name="form1" class="input-group">
+				<input type="text" id="log_email" class="input-field" placeholder="Enter Email" required />
+				<input type="password" id="log_pass" class="input-field" placeholder="Enter Password" required />
+				<input type="checkbox" class="check-box"/><span>Remember Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="reset-pass.html">Reset Pass</a> </span>
+				<button type="submit" class="submit-btn" onClick="check()">Log In</button>
+			</form>
+
+		
+		</div>
+	</div>
+</body>
+</html>
